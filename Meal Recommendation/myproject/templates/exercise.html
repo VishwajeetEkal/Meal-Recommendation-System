@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.complete_body{
+	background: #eeeff4;
+}
+
+.wrapper .header{
+	width: 100%;
+	height: 50px;
+	background: #567681;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: 900;
+}
+
+.cards_wrap{
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.cards_wrap .card_item{
+	padding: 15px 25px;
+	width: 25%;
+	transition: all .2s ease-in-out;
+}
+
+.cards_wrap .card_item:hover {
+transform: scale(1.1);
+}
+
+
+.cards_wrap .card_inner{
+	background: #fff;
+	border-radius: 5px;
+	padding: 35px 20px;
+	min-width: 225px;
+	min-height: 315px;
+	max-height: 370px;
+	width: 100%;
+}
+
+.cards_wrap .card_item img{
+	width: fill;
+	height: 80px;
+	margin-bottom: 5px;
+}
+
+.cards_wrap .card_item .role_name{
+	color: black;
+	font-weight: 900;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 20px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cards_wrap .card_item .real_name{
+	color: #b6c0c2;
+	font-size: 12px;
+	font-weight: 100;
+	margin: 5px 0 10px;
+}
+
+.cards_wrap .card_item .film{
+	font-size: 14px;
+	line-height: 24px;
+	color: #7b8ca0;
+}
+
+@media screen and (max-width: 1024px){
+	.cards_wrap .card_item{
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.cards_wrap .card_item{
+		width: 50%;
+	}
+	.wrapper .header{
+		font-size: 16px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 568px){
+	.cards_wrap .card_item{
+		width: 100%;
+	}
+	.wrapper .header{
+		font-size: 14px;
+	}
+}
+
+</style>
+
+
+<div class="complete_body"> 
+    <div class="wrapper">
+        <div class="header">Exercises</div>
+    
+        <div class="cards_wrap">
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2VpZ2h0JTIwbGlmdHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Weights</div>
+                    <div class="real_name">Chadwick Boseman</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJ1bm5pbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Running</div>
+                    <div class="real_name">Benedict Cumberbatch</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1559257619-ce02754770ee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHN3aW1taW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Swimming</div>
+                    <div class="real_name">Scarlett Johansson</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1528629297340-d1d466945dc5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmlraW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Biking</div>
+                    <div class="real_name">Tom Holland</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Yoga</div>
+                    <div class="real_name">Scarlett Johansson</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/flagged/photo-1573556291531-a5d957d7e4e7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGlsYXRlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Pilates</div>
+                    <div class="real_name">Chadwick Boseman</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8enVtYmF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Zumba</div>
+                    <div class="real_name">Tom Holland</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+            <div class="card_item">
+                <div class="card_inner">
+                    <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8enVtYmF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                    <div class="role_name">Masala Bhangra</div>
+                    <div class="real_name">Benedict Cumberbatch</div>
+                    <div class="film">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt aliqua.</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
